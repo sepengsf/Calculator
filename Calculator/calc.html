@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Calculator</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="styles.css" rel ="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" class="form-control mb-2" id="display" disabled>
+            <div class="row">
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('7')">7</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('8')">8</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('9')">9</button>
+                <button class="btn btn-warning btn-lg col-3" onclick="calculator.setOperator('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('4')">4</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('5')">5</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('6')">6</button>
+                <button class="btn btn-warning btn-lg col-3" onclick="calculator.setOperator('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('1')">1</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('2')">2</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('3')">3</button>
+                <button class="btn btn-warning btn-lg col-3" onclick="calculator.setOperator('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDigit('0')">0</button>
+                <button class="btn btn-secondary btn-lg col-3" onclick="calculator.appendDecimal('.')">.</button>
+                <button class="btn btn-success btn-lg col-6" onclick="calculator.calculate()">=</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-warning btn-lg col-12" onclick="calculator.clear()">C</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="calc.js"></script>
+</body>
+</html>
